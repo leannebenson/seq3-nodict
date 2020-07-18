@@ -8,19 +8,15 @@ __author__ = '???'
 
 class Node:
     def __init__(self, key, value=None):
-        self.hash = None
-        self.key = None
-        self.value = None
-        # Your code here
-        return
+        self.key = key
+        self.value = value
+        self.hash = hash(self.key)
 
     def __repr__(self):
-        # Your code here
-        return
+        return f'{self.__class__.__name__}({self.key}, {self.value})'
 
     def __eq__(self, other):
-        # Your code here
-        return
+        return self.key == other.key
 
 
 class NoDict:
